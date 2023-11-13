@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.0">
 <title data-rh="true">I/O Monitoring (UBC.io) | UBC - cross system workflows</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://industriousconsulting.github.io/ubc-docs-ghpages/IO/documentation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="I/O Monitoring (UBC.io) | UBC - cross system workflows"><meta data-rh="true" name="description" content="UBC - Unified Backend Connector comes with a component for I/O monitoring/processing, which is a tool and framework for comprehensive interface monitoring from and into the SAP system​ - single entry point!"><meta data-rh="true" property="og:description" content="UBC - Unified Backend Connector comes with a component for I/O monitoring/processing, which is a tool and framework for comprehensive interface monitoring from and into the SAP system​ - single entry point!"><link data-rh="true" rel="icon" href="/ubc-docs-ghpages/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://industriousconsulting.github.io/ubc-docs-ghpages/IO/documentation"><link data-rh="true" rel="alternate" href="https://industriousconsulting.github.io/ubc-docs-ghpages/IO/documentation" hreflang="en"><link data-rh="true" rel="alternate" href="https://industriousconsulting.github.io/ubc-docs-ghpages/IO/documentation" hreflang="x-default"><link rel="stylesheet" href="/ubc-docs-ghpages/assets/css/styles.97873490.css">
-<script src="/ubc-docs-ghpages/assets/js/runtime~main.7732e598.js" defer="defer"></script>
+<script src="/ubc-docs-ghpages/assets/js/runtime~main.843fdae8.js" defer="defer"></script>
 <script src="/ubc-docs-ghpages/assets/js/main.8394169c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -113,8 +113,8 @@ Let&#x27;s construct an example:</p>
 </ul>
 <p>The processing of the next message in a queue waits until it was written to the queue and unlocks the processing.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="queue-monitor-ubcio_queue">Queue monitor <code>/UBC/IO_QUEUE</code><a href="#queue-monitor-ubcio_queue" class="hash-link" aria-label="Direct link to queue-monitor-ubcio_queue" title="Direct link to queue-monitor-ubcio_queue">​</a></h2>
-<p>This transaction basically is an overview of all messages which are currently organized by a Queue. You can see the reasons why messages are waiting (predecessors) and of course details. You can jump to the monitor by selecting the messages and click on &quot;monitor&quot;.</p>
-<p><img loading="lazy" alt="Queue monitor" src="/ubc-docs-ghpages/assets/images/image_007-16e8f97f4d8adfd35d92fc29957f02fb.png" width="526" height="451" class="img_ev3q"></p>
+<p>This transaction basically is an overview of all messages which are currently organized by a Queue. You can see the reasons why messages are waiting (predecessors) and of course details. You can jump to the monitor by selecting the messages and click on &quot;monitor&quot;.<br>
+<img loading="lazy" alt="Queue monitor" src="/ubc-docs-ghpages/assets/images/image_007-16e8f97f4d8adfd35d92fc29957f02fb.png" width="526" height="451" class="img_ev3q"></p>
 <h1>Development</h1>
 <p>This step contains all the information needed for developing an new interface, from Customizing to development.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="customizing">Customizing<a href="#customizing" class="hash-link" aria-label="Direct link to Customizing" title="Direct link to Customizing">​</a></h2>
@@ -214,7 +214,7 @@ You can see that the Queue starts with the literal <code>MATERIAL_</code> and th
 It is for defining the &quot;maximum runs&quot; and wait time between a run.
 You have to assign specific combinations of &quot;T100&quot; Message-Id and -Number. As soon as the error of an interface contains a message configured in its Auto Restart group, it will be considered. If an error message is not configured withing the restart group, it will not be considered.
 For example, you will define the &quot;T100&quot; Message Combination for &quot;Message is locked&quot; and define that the restart can be tried again in 5 minutes for 3 times.
-If the material than is locked again, the Message won&#x27;t be auto restarted again.
+If the material than is locked again, the Message won&#x27;t be auto restarted again.<br>
 <img loading="lazy" alt="Auto Restart Group" src="/ubc-docs-ghpages/assets/images/image_013-e3096d9c2e5e07dadca57b93000f27a2.png" width="774" height="256" class="img_ev3q">
 <img loading="lazy" alt="Assignment of Messages" src="/ubc-docs-ghpages/assets/images/image_014-27905cdf9e6160304f16c2c77fdb8e0a.png" width="828" height="183" class="img_ev3q">
 Finally the Auto Restart Group needs to be assigned to an Interface Function assignment on level <code>functions</code> in view cluster.</p>
@@ -279,7 +279,7 @@ The target interface will be determined by the message payload in method <code>/
 <ul>
 <li><a href="https://help.sap.com/saphelp_em92/helpdata/en/48/973e3755493987e10000000a421937/frameset.htm" target="_blank" rel="noopener noreferrer">Create inbound destination</a>
 The convention is that your name starts in your namespace (Z/Y).
-Here is an example of how to create the destination ZUBCIO_INBOUND:
+Here is an example of how to create the destination ZUBCIO_INBOUND:<br>
 <img loading="lazy" alt="Inbound destination" src="/ubc-docs-ghpages/assets/images/image_002-734ed56272433068dce98269e6c86818.png" width="540" height="508" class="img_ev3q">
 A few notes:<!-- -->
 <ul>
