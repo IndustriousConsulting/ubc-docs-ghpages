@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.0">
 <title data-rh="true">I/O Monitoring (UBC.io) | UBC - cross system workflows</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://ubc.services/IO/documentation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="I/O Monitoring (UBC.io) | UBC - cross system workflows"><meta data-rh="true" name="description" content="Intro"><meta data-rh="true" property="og:description" content="Intro"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://ubc.services/IO/documentation"><link data-rh="true" rel="alternate" href="https://ubc.services/IO/documentation" hreflang="en"><link data-rh="true" rel="alternate" href="https://ubc.services/IO/documentation" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.939e2f28.css">
-<script src="/assets/js/runtime~main.97469edb.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a7e651c5.js" defer="defer"></script>
 <script src="/assets/js/main.ff978be8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -205,7 +205,8 @@ Please consider the following best practice to avoid queue name conflicts: as a 
 For example:
 <img loading="lazy" alt="Queue Key Example for Material" src="/assets/images/image_012-6a7f396c58768b587b4a60d1298948b9.png" width="532" height="174" class="img_ev3q"><br>
 <!-- -->You can see that the Queue starts with the literal <code>MATERIAL_</code> and then adds the material number. A Queue example would be <code>MATERIAL_4711</code>.
-The queue key will be concatenated according to the given sequence. You are free to add additional fields to your queue key. Just consider the limit of 40 characters in total. By default, an alpha conversion is applied to a field value.</p>
+By default, an alpha conversion is applied to a field value.
+The queue key will be concatenated according to the given sequence. You are free to add as much fields and literals to your queue key as needed. Just consider the limit of 40 characters in total.</p>
 <h4 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="auto-restart">Auto Restart<a href="#auto-restart" class="hash-link" aria-label="Direct link to Auto Restart" title="Direct link to Auto Restart">​</a></h4>
 <p>First, define a Auto Restart group in View Cluster Entry <code>restart groups</code>.
 It is for defining the &quot;maximum runs&quot; and wait time between a run.
